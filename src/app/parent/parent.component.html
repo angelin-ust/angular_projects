@@ -1,0 +1,13 @@
+<p>parent works!</p>
+
+
+
+    Name:
+    <input type="text" [(ngModel)]="names"  class="form-control">
+    <br>
+    Age:
+    <input type="text" [(ngModel)]="age"  class="form-control">
+    <input type="button" (click)="clickMe()" value="clickMe">
+<h3>{{value}}</h3>
+<app-child [parentData]="parentData"  [parentData1]="parentData1"  
+(submitData)="submitData($event)"></app-child>
