@@ -1,0 +1,58 @@
+<div class="container">
+  <h4>Parent component</h4>
+  To send whatever is entered in the text field to child component<br>
+  pass data:<input type="text" class="form-control"
+   [(ngModel)]="enterName"/>
+   <input type="button" value="send" (click)="transferData()" 
+   class="btn btn-primary"  >
+</div>
+<!-- home -->
+<!-- <div>
+  <h4>Parent component</h4>
+  To send whatever is entered in the text field to child component<br>
+  pass data:<input type="text" class="form-control"
+   [(ngModel)]="enterMessage"/>
+   <input type="button" value="send" (click)="transferMessage()" 
+   class="btn btn-danger" >
+</div> -->
+
+
+<!-- home1 -->
+<div class="container">
+  <h4>Parent component1</h4>
+  To send whatever is entered in the text field to child component<br>
+  pass data:<input type="text" class="form-control"
+   [(ngModel)]="enterColour"/>
+   <input type="button" value="send" (click)="transferdataColour()" 
+   class="btn btn-primary"  >
+</div>
+
+
+<!-- about -->
+<h4>Recieved from child:{{value}}</h4>
+<!-- <div class="container">
+  <h4>Parent component1</h4>
+ From About<br>
+  pass data:<input type="text" class="form-control"
+  [(ngModel)]="enterMessage"/>
+   <input type="button" value="send" (click)="transferMessage()" 
+   class="btn btn-primary"  >
+</div> -->
+
+<!-- parent child property binding is done here -->
+<app-home [parentData]="parentData"></app-home>
+<app-home1 [parentData1]="parentData1"></app-home1>
+<app-about (sendData)="sendData($event)"></app-about>
+<!-- <app-about (sendMessage)="sendMessage($event)"></app-about> -->
+
+
+
+
+
+
+
+<!-- ,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+<div class="parent-component">
+  <h1> This is the parent component </h1>
+</div>
+
